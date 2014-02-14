@@ -1,5 +1,5 @@
 #concat.js
-Concatination tool implemented using the bluebird promise library.
+Concatination tool implemented using the [bluebird promise library](https://github.com/petkaantonov/bluebird).
 
 ###How to use
 * make sure you have node installed
