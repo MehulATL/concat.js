@@ -29,12 +29,14 @@ fs.readdirAsync('/Users/mehul/code/learnPromises/')
     console.log(dir);
     return fs.readFileAsync(path.join(directory,dir), 'utf8');
   }));
-}).then(function(arrayOfContents) {
+})
+.then(function(arrayOfContents) {
   var contents = _.reduce(arrayOfContents, function(memo, value) {
     return memo+value;
   }, '');
   console.log(contents);
   return fs.writeFileAsync('bar.js', contents);
-}).then(function(){
+})
+.then(function(){
   console.log('this shit works');
 });
