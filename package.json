@@ -1,7 +1,7 @@
 {
-  "name": "learnPromises",
-  "version": "0.0.0",
-  "description": "",
+  "name": "concat.js",
+  "version": "0.0.1",
+  "description": "Concatination tool implemented using the bluebird promise library",
   "main": "index.js",
   "dependencies": {
     "bluebird": "~1.0.4",
@@ -11,6 +11,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Mehul Patel",
+  "license": "MIT"
 }
