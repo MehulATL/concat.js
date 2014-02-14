@@ -4,9 +4,9 @@ var path = require('path');
 var _ = require('underscore');
 
 // .then converts whatever is returned from the function passed into it into a promise object
-var directory = '/Users/mehul/code/learnPromises/';
+var directory = '/*YOUR DIRECTORY PATH HERE*/';
 
-fs.readdirAsync('/Users/mehul/code/learnPromises/')
+fs.readdirAsync(directory)
 .then(function(dirs) {
   return Promise.all(_.map(dirs, function(dir) {
     return fs.statAsync(path.join(directory,dir)).then(function(obj){
@@ -26,7 +26,6 @@ fs.readdirAsync('/Users/mehul/code/learnPromises/')
 })
 .then(function(dirs) {
   return Promise.all(_.map(dirs, function(dir) {
-    console.log(dir);
     return fs.readFileAsync(path.join(directory,dir), 'utf8');
   }));
 })
@@ -34,9 +33,8 @@ fs.readdirAsync('/Users/mehul/code/learnPromises/')
   var contents = _.reduce(arrayOfContents, function(memo, value) {
     return memo+value;
   }, '');
-  console.log(contents);
-  return fs.writeFileAsync('bar.js', contents);
+  return fs.writeFileAsync('output.js', contents);
 })
 .then(function(){
-  console.log('this shit works');
+  console.log('Files successfully concated into ouput.js.');
 });
